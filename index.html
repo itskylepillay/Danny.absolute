@@ -69,13 +69,20 @@ button:hover {
 function login() {
   const username = document.getElementById('username').value;
   const password = document.getElementById('password').value;
-  if(username && password) {
-    window.location.href = "homepage.html";
+
+  // Define the allowed credentials
+  const allowedUsername = "admin";
+  const allowedPassword = "1234";
+
+  // Check if they match
+  if(username === allowedUsername && password === allowedPassword) {
+    window.location.href = "homepage.html"; // successful login
   } else {
-    alert("Please enter both username and password.");
+    alert("Incorrect username or password.");
   }
 }
 </script>
+
 
 </body>
 </html>
